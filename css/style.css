@@ -1,0 +1,183 @@
+/* GENERAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-image: url("../img/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: rgb(17, 68, 77);
+}
+
+/* LAYOVER */
+.layover-bg{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(70, 70, 70, 0.432);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BOOKING PANEL STYLE */
+.layover-bg .booking{
+    width: 50%;
+    background-image: linear-gradient(45deg, rgba(204, 204, 204, 0.788), rgba(255, 255, 255, 0.795));
+    text-align: center;
+    padding: 2.8rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 2px 22px 0px rgba(0, 0, 0, 0.349);
+}
+
+.layover-bg .booking img{
+    width: 6rem;
+    margin-bottom: .8rem;
+}
+
+.layover-bg .booking h2{
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.layover-bg .booking hr{
+    border: none;
+    border-bottom: 1px solid currentColor;
+    border-radius: 1px;
+}
+
+.layover-bg .booking input{
+    width: 5rem;
+    text-align: center;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin: 2rem 0.6rem;
+    border: 1px solid rgba(17, 68, 77, 0.336);
+}
+
+.layover-bg .booking .age-group,
+.layover-bg .booking .km-group{
+    display: inline-block;
+}
+
+.layover-bg .booking .age-group{
+    margin-right: 3rem;
+}
+
+.layover-bg .booking input:focus{
+    box-shadow: 0px 2px 2px 0px rgba(17, 68, 77, 0.5);;
+}
+
+.layover-bg .booking button{
+    border: none;
+    color: white;
+    background-color: rgb(17, 68, 77);
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: all 200ms;
+    cursor: pointer;
+    outline: none;
+}
+
+.layover-bg .booking button:hover{
+    background-color: rgb(24, 99, 112);
+}
+
+.layover-bg .booking button:active{
+    transform: scale(0.9);
+}
+
+/* TICKET SECTION */
+.layover-bg .booking #ticket{
+    padding-top: 3rem;
+    background-image: url("../img/ticket.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 152px;
+    width: 356px;
+    position: relative;
+    display: none;
+    margin: 2rem auto 0;
+}
+
+/* discount */
+.layover-bg .booking #ticket #discount{
+    position: absolute;
+    top: 1.8rem;
+    right: 1.6rem;
+    font-weight: 700;
+    font-size: 1.3rem;
+    transform: rotate(-45deg);
+    color: rgb(158, 0, 0);
+    border-radius: 50%;
+    overflow: hidden;
+    background: yellow;
+    height: 6rem;
+    width: 6rem;
+    padding-top: 0.5rem;
+    display: none;
+}
+
+/* ************ RESPONSIVE ************ */
+/* medium-large devices <992px */
+@media screen and (max-width: 992px){
+    .layover-bg .booking{
+        width: 70%;
+    }
+}
+
+/* medium devices <768px */
+@media screen and (max-width: 768px){
+    .layover-bg .booking{
+        width: 90%;
+    }
+
+    .layover-bg .booking input{
+        width: 7rem;
+        height: 3rem;
+    }
+
+    .layover-bg .booking .age-group,
+    .layover-bg .booking .age-group *,
+    .layover-bg .booking .km-group,
+    .layover-bg .booking .km-group *{
+        display: block;
+        margin: 1rem auto;
+    }
+
+    .layover-bg .booking .age-group{
+        margin-right: 0;
+    }
+}
+
+/* small devices <480px */
+@media screen and (max-width: 480px){
+    .layover-bg .booking #ticket{
+        height: 120px;
+        width: 280px;
+        padding-top: 2.3rem;
+    }
+
+    .layover-bg .booking #ticket #discount{
+        font-size: 1rem;
+        height: 75px;
+        width: 75px;
+        top: 1.4rem;
+        right: 1.3rem;
+    }
+
+    .layover-bg .booking #ticket .price{
+        font-size: 0.9rem;
+        padding-right: 10px;
+    }
+}
