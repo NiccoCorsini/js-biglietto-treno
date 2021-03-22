@@ -32,11 +32,13 @@ function calculate() {
     if ( isNaN(age) || age <= 0 || age >= 100 ){
         var age = NaN;
         alert("Warning! invalid age value! Retry");
+        return;
     }
 
     if ( isNaN(km) || km <= 0 || km >= 100 ){
         var km = NaN;
         alert("Warning! invalid km value! Retry");
+        return;
     }
 
     // AGE SELECTOR
